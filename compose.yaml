@@ -1,0 +1,10 @@
+# The download page, served on the home server for the tailnet only.
+# Tailscale serve puts it on https (see the project note); nothing is open to the internet.
+services:
+  site:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8096:80"
+    volumes:
+      - ./docs:/usr/share/nginx/html:ro

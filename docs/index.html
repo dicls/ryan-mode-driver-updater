@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan Mode Driver Updater</title>
+<meta name="description" content="Free download for Windows 10 and 11. One button updates your drivers safely, makes a restore point first, and leaves risky drivers alone.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon.png">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+:root {
+  --accent: #0067C0;
+  --accent-hover: #005aa8;
+  --link: #0067C0;
+  --focus: #0067C0;
+  --bg: #ffffff;
+  --text: #1b1b1b;
+  --muted: #565656;
+  --code-bg: #f2f3f5;
+  --border: #e3e4e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-hover: #2188d8;
+    --link: #6cb6ff;
+    --focus: #6cb6ff;
+    --bg: #111111;
+    --text: #eeeeee;
+    --muted: #b3b3b3;
+    --code-bg: #1d1d1d;
+    --border: #2e2e2e;
+  }
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-block: 3.5rem 3rem;
+}
+
+/* Layout */
+.stack { display: flex; flex-direction: column; gap: var(--stack-gap, 1rem); }
+.prose > * + * { margin-block-start: var(--prose-flow, 1em); }
+
+main, footer { max-width: 40rem; margin-inline: auto; padding-inline: 1rem; }
+main { --stack-gap: 3rem; }
+
+/* Top of the page */
+.hero { --stack-gap: 1.6rem; text-align: center; align-items: center; }
+.hero-intro { --prose-flow: .4em; }
+.app-icon { inline-size: 96px; block-size: 96px; }
+.tagline { font-size: 1.125rem; color: var(--muted); }
+.download { --prose-flow: .6em; }
+.download-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: .8em 2.4em;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+.download-button:hover { background: var(--accent-hover); }
+.small { font-size: .875rem; color: var(--muted); }
+
+/* Text */
+h1 { font-size: 2rem; }
+h1, h2 { line-height: 1.25; text-wrap: balance; }
+h2 { font-size: 1.3rem; }
+a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+ul, ol { padding-inline-start: 1.6em; }
+.prose li + li { margin-block-start: .35em; }
+
+.checksum {
+  display: block;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: .875rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: .375rem;
+  padding: .7rem .9rem;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  margin-block-start: 4rem;
+  border-block-start: 1px solid var(--border);
+  padding-block-start: 1.5rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+</style>
+</head>
+<body>
+<main class="stack">
+  <header class="stack hero">
+    <img class="app-icon" src="icon.png" alt="">
+    <div class="prose hero-intro">
+      <h1>Ryan Mode Driver Updater</h1>
+      <p class="tagline">One button to update your drivers, safely.</p>
+    </div>
+    <div class="prose download">
+      <a class="download-button" href="RyanModeDriverUpdaterSetup-0.3.0.exe" download>Download for Windows</a>
+      <p class="small">Version 0.3.0 · Windows 10 and 11, 64-bit · 6 MB · Free</p>
+    </div>
+  </header>
+
+  <section class="prose">
+    <h2>What it does</h2>
+    <ol>
+      <li>You click the button that says “Update my drivers”.</li>
+      <li>The app makes a Windows restore point first, so you can go back.</li>
+      <li>It finds newer drivers for your network, Wi-Fi, Bluetooth, sound, camera, printer and fingerprint reader, and installs them.</li>
+    </ol>
+    <p>It tells you when it’s done, and whether you need to restart.</p>
+  </section>
+
+  <section class="prose">
+    <h2>What it leaves alone</h2>
+    <p>Some drivers can cause real trouble if they go wrong, so the app stays away from these:</p>
+    <ul>
+      <li>Storage, chipset and firmware drivers. A bad one can stop Windows from starting.</li>
+      <li>Graphics drivers. Use the NVIDIA or AMD app for those.</li>
+      <li>It never installs a driver unless it is signed by Microsoft’s hardware program and made for that exact device.</li>
+    </ul>
+    <p>These rules are built in and can’t be turned off.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Installing it</h2>
+    <ol>
+      <li>Download the file from this page.</li>
+      <li>Open the file you downloaded.</li>
+      <li>Windows may show a blue box that says “Windows protected your PC”. That happens because the app is new and not from a big company. Click “More info”, then “Run anyway”. Only do this for a file you downloaded from this page.</li>
+      <li>Follow the setup, then click “Finish”.</li>
+      <li>Open “Ryan Mode Driver Updater” from your desktop and click the button.</li>
+    </ol>
+    <p>It will ask for administrator permission, because installing drivers needs it.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Check your download</h2>
+    <p>If you want to be careful, you can check that your file is the exact one published here. Every file has a fingerprint, called a SHA-256 hash.</p>
+    <p>The fingerprint of version 0.3.0 is:</p>
+    <code class="checksum">56A92D5F6A200D16C2513A3FC23E1CCB9D48D8240BAEBDE5301A022A6A4B2A3E</code>
+    <p>To check it, open PowerShell in the folder where you saved the file, then run:</p>
+    <code class="checksum">Get-FileHash .\RyanModeDriverUpdaterSetup-0.3.0.exe</code>
+    <p>If the result matches the fingerprint above, your copy is the original.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Privacy</h2>
+    <p>This page has no cookies and no tracking. Like any website, the server that hosts it logs visitors’ IP addresses for security.</p>
+    <p>The app sends nothing about you or your PC to us.</p>
+    <p>To get drivers, the app downloads the list of driver packs from the Snappy Driver Installer Origin website, then the packs themselves through BitTorrent. Like any download, those servers and the other computers sharing the packs can see your IP address.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Undoing it</h2>
+    <p>If something goes wrong, use System Restore. Pick the restore point named “Ryan Mode Driver Updater” with the date of the update.</p>
+    <p>To remove the app, go to Settings &gt; Apps &gt; Installed apps &gt; Ryan Mode Driver Updater &gt; Uninstall.</p>
+  </section>
+
+  <section class="prose">
+    <h2>Made with</h2>
+    <p>The app uses two free, open-source programs, unchanged:</p>
+    <ul>
+      <li><strong>Snappy Driver Installer Origin (SDIO) R889</strong>, by Glenn Delahoy. GNU GPL version 3. Source and downloads: <a href="https://www.glenn.delahoy.com/snappy-driver-installer-origin/">glenn.delahoy.com/snappy-driver-installer-origin</a></li>
+      <li><strong>aria2 1.37.0</strong>, by Tatsuhiro Tsujikawa and contributors. GNU GPL version 2 or later, with the OpenSSL exception. Source: <a href="https://github.com/aria2/aria2/releases/tag/release-1.37.0">github.com/aria2/aria2, release 1.37.0</a></li>
+    </ul>
+    <p>Their license texts come with the app, in its “licenses” folder. You can also download the exact source code of both from this site: <a href="source/sdio-r889-source.zip">SDIO R889 source</a> (zip, 4 MB) and <a href="source/aria2-1.37.0.tar.xz">aria2 1.37.0 source</a> (tar.xz, 2 MB).</p>
+    <p>Drivers belong to their makers. This app is not affiliated with SDIO, aria2, Microsoft or any hardware maker.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Provided as is, without any warranty. Use at your own risk; it makes a restore point first so you can go back.</p>
+</footer>
+</body>
+</html>
